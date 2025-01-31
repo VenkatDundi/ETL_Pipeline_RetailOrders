@@ -19,12 +19,10 @@ def extract(ds):
     for i in os.listdir("."):
         if i.endswith("zip"):
             with ZipFile(i, 'r') as zip1:
-                zip1.extractall()
+                zip1.extractall()                # Extracts the csv files in the same directory
         else:
             downloaded_file = i
     
-
-
 
 def transform():
 
@@ -57,8 +55,6 @@ def transform():
     return df
 
 
-
-
 def load(dataframe):
 
     # Establish to SQL Server with Windows Authentication- ServerName InstanceName(If Available) DatabaseName
@@ -76,9 +72,9 @@ def load(dataframe):
 
 
 
-try:
+try:                 # Make sure to request api using Author/Dataset; There may be chances of Access Denied due to continuous request hit to API
 
-    #Extracted = extract(input("Provide the Author/Datset from URL: "))
+    Extracted = extract(input("Provide the Author/Datset from URL: "))                # ankitbansal06/retail-orders
     Transformed = transform()
     Load = load(Transformed)
 
