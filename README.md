@@ -81,8 +81,9 @@ Ensure you have the following installed:
 1. Clone the repository:
   
    ```sh
-   git clone https://github.com/your-username/etl-retail-orders.git
-   cd etl-retail-orders
+   git clone https://github.com/your-username/cd ETL_Pipeline_RetailOrders.git
+   cd ETL_Pipeline_RetailOrders
+
    ```
 
 2. Configure Kaggle API Access
