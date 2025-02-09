@@ -111,13 +111,25 @@ Ensure you have the following installed:
     Extract and unzip the dataset.
     Perform necessary transformations using Pandas.
     Load the processed data into SQL Server using Windows Authentication.
+    
+    Before executing script make : 
+    ```
+    - Linux/macOS:
+      mkdir -p ~/.kaggle
+      mv ~/Downloads/kaggle.json ~/.kaggle/
+      chmod 600 ~/.kaggle/kaggle.json  # Secure the file
+   
+   - Windows (Command Prompt):
+      mkdir %USERPROFILE%\.kaggle
+      move C:\path\to\kaggle.json %USERPROFILE%\.kaggle\
+    ```
   
 
-5. Query the Database
+6. Query the Database
 
     Utilize the provided SQL scripts and stored procedures to analyze the data and extract insights.
 
-6. Visualize Data in Power BI
+7. Visualize Data in Power BI
 
     Open the Power BI report (.pbix file)
     Update the SQL Server connection settings to match your database configuration. [Provide Server, Database Name]
